@@ -5,6 +5,8 @@ var morgan=require('morgan');
 var Model=require('./model/models.js');
 var router=express.Router();
 
+var port=process.env.PORT || 3000;
+
 // create the application
 var app=express();
 
@@ -87,7 +89,7 @@ router.post('/api/users',function(req,res){
 
 app.use('/',router)
 
-app.listen(3000,function(){
-	console.log('server is running on port no - 3000')
+app.listen(port,function(){
+	console.log('server is running on port no - port')
 })
 
